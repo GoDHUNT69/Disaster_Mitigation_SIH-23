@@ -1,0 +1,23 @@
+path: C:\Users\prashantVIT\PycharmProjects\SIH'23(Draft)\datasets\
+train:
+  - 0debris/train/images
+  - 1cracks/train/images
+  - 2potholes/train/images
+  - 3fallen trees/train/images
+
+val:
+  - 0debris/train/images
+  - 1cracks/train/images
+  - 2potholes/train/images
+  - 3fallen trees/train/images
+
+test:
+  - 0debris/train/images
+  - 1cracks/train/images
+  - 2potholes/train/images
+
+nc: 3
+names:
+  0: Danger
+  1: Cracks
+  2: Fallen Trees

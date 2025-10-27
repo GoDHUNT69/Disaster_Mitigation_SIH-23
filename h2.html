@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROAD MONITORING SYSTEM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/eel.js"></script>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        #title {
+            text-align: center;
+            padding: 20px;
+        }
+        .image,
+        .video,
+        .camera {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 400px;
+            float: none;
+        }
+        .image input,
+        .video input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .image button, .camera button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .image button:hover, .camera button:hover {
+            background-color: #0056b3;
+        }
+        /* Hide the video element initially */
+        #camera-feed {
+            display: none;
+            width: 100%;
+            max-width: 400px;
+        }
+        /* Add styles for the "RESET" button */
+        #reset-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #reset-button button {
+            padding: 10px 20px;
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        #reset-button button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">
+        <h1>ROAD MONITORING SYSTEM</h1>
+    </div>
+    <div class="image">
+        <span id="imageinput">IMAGE / VIDEO</span>
+        <br>
+        <div>
+            <input type="text" placeholder="Enter image/video path here">
+        </div>
+        <br>
+        <button onclick="SUBFunc()">SUBMIT</button>
+    </div>
+    <div class="camera">
+        <span id="caminput">CAMERA</span>
+        <br>
+        <div>
+            <h3> CAM OPENING</h3>
+        </div>
+        <br>
+        <button onclick="openCamera()">OPEN CAMERA</button>
+        <br>
+        <video id="camera-feed" autoplay></video>
+    </div>
+    
+    <!-- "RESET" button at the bottom -->
+    <div id="reset-button">
+        <button onclick="ResetFunc()">RESET</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
